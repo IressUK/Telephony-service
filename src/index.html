@@ -1,0 +1,74 @@
+
+<html lang="en" >
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- Angular Material style sheet -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="http://ajax.googleapis.com/ajax/libs/angular_material/1.1.0-rc2/angular-material.min.css">
+    <link rel="stylesheet" href="assests/site.css">
+</head>
+<body class="md-body-1" ng-app="iressTelephonyService" ng-cloak layout="column">
+    <!-- Main Layout -->
+    <md-toolbar layout="row" class="md-whiteframe-z1">
+        <div class="md-toolbar-tools">
+            <span>Telephony Service</span>
+        </div>
+    </md-toolbar>
+    <md-content flex id="content" layout="row">
+        <md-sidenav style="width: 250px" md-is-locked-open="true" class="md-sidenav-left"  md-component-id="left" md-whiteframe>
+            <div layout-padding>
+                <div layout="row" layout-align="start center">
+                    <span layout-padding class="fa fa-search"></span>
+                    <span>Search</span>
+            </div>
+
+                <div layout="row" layout-align="start center">
+                    <span layout-padding class="fa fa-user-plus"></span>
+                    <span>Create Client</span>
+                </div>
+            <div layout="row" layout-align="start center">
+                    <span layout-padding class="fa fa-sign-out"></span>
+                    <span>Logout</span>
+            </div>
+            </div>
+        </md-sidenav>
+        <md-content flex id="main-content" layout="column">
+            <div  flex layout="column"  ng-view layout-padding></div>
+        </md-content>
+    </md-content>
+
+    <!-- Angular.js Libraries -->
+    <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.5.3/angular.min.js"></script>
+    <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.5.3/angular-animate.min.js"></script>
+    <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.5.3/angular-aria.min.js"></script>
+    <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.5.3/angular-messages.min.js"></script>
+    <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.5.3/angular-route.js"></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/rxjs/4.1.0/rx.all.min.js"></script>
+
+    <!-- Angular Material Library -->
+    <script src="http://ajax.googleapis.com/ajax/libs/angular_material/1.1.0-rc2/angular-material.min.js"></script>
+
+    <!-- Application  Bootstrap -->
+    <script src="app/app.modules.js"></script>
+    <script src="app/app.values.js"></script>
+    <script src="app/app.routes.js"></script>
+    <script src="app/app.run.js"></script>
+
+    <!-- Application Shared Services-->
+    <script src="app/shared/services/authentication-service.js"></script>
+    <script src="app/shared/services/search-service.js"></script>
+
+    <!-- Application Shared Directives-->
+
+    <!-- Application -->
+    <script src="app/components/search/search-controller.js"></script>
+    <script src="app/components/login/login-controller.js"></script>
+
+</body>
+</html>
+
+<!--
+Copyright 2016 Google Inc. All Rights Reserved.
+Use of this source code is governed by an MIT-style license that can be in foundin the LICENSE file at http://material.angularjs.org/license.
+-->
